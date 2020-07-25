@@ -1,10 +1,12 @@
-<p id="notice">
+<p id="notice" class="show_text">
 	<%= notice %>
 </p>
 
-<p><strong>Title:</strong></p>
-<p><%= @book.title %></p>
-<p><strong>Body:</strong></p>
-<p><%= @book.body %></p>
+<div class="field">
+	<p class="show_text"><strong>Title: </strong><%= @book.title %></p>
+</div>
+<div class="field">
+	<p class="show_text"><strong>Body: </strong><%= @book.body %></p>
+</div>
 
-<%= link_to 'Edit', "#" %><p>|</p><%= link_to 'Back', "/books" %>
+<%= link_to 'Edit', edit_book_path(@book.id) %> | <%= link_to 'Back', "/books" %>
